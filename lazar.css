@@ -202,7 +202,7 @@ figure {
 }
 @media (max-width: 1170px) {
 
-    * {
+    main {
       display: flex;
       align-items: center;
       justifuy-content: center;
