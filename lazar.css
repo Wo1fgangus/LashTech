@@ -282,9 +282,13 @@ figure {
     transform: translateY(-8px) rotate(45deg);
   }
 
-   .webLogo {
-    align-items: center;
-  }
+  .webLogo {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  width: 100%;
+}
+
 }
 
 .navbar-toggle {
