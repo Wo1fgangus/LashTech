@@ -1,0 +1,352 @@
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("WEBIMG/FQUG7206.JPG");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 0;
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.navbar {
+  background: #131313;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999; 
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+
+#navbar-logo {
+  background-color: hotpink;
+  background-image: linear-gradient(to top, #ff1493 0%, #Ff69b4 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  position: static;
+  top: auto;
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.navbar-menu.active {
+  background: rgba(0,0,0,0.9);
+  top: 100%;
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: 99;
+  height: 60vh;
+  font-size: 1.6rem;
+}
+
+h1 {
+    color: aqua;
+  }
+
+h3 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+
+  .center-text {
+    text-align: center;
+  }
+
+#lash-style {
+    width: 140px;
+    height: 140px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.stylesList {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.styles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+}
+
+/* Container for slideshow and title */
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 5px solid black; /* Border around the whole section */
+  padding: 10px;
+  background-color: white; /* Background inside the border */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* GALLERY title inside the border */
+.gallery-title {
+  position: relative;
+  top: -20px; /* Moves it above the border */
+  background: white; /* Background to blend with container */
+  padding: 5px 15px;
+  font-size: 24px;
+  font-weight: bold;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+/* Slideshow container */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* Images inside the slideshow */
+.slide {
+  position: absolute;
+  min-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures full image is visible */
+  opacity: 0;
+  animation: slideAnimation 18s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 3s; }
+.slide:nth-child(3) { animation-delay: 6s; }
+.slide:nth-child(4) { animation-delay: 9s; }
+.slide:nth-child(5) { animation-delay: 12s; }
+.slide:nth-child(6) { animation-delay: 15s;}
+
+@keyframes slideAnimation {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  20%  { opacity: 1; }
+  25%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+figure {
+    border: 4px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0px;
+}
+@media (max-width: 960px) {
+
+  .navbar-container {
+    flex-direction: flex;
+    justify-content: space-between;
+    padding: 0;
+    height: 80px;
+    z-index: 1;
+    max-width: 1300px;
+  }
+
+  .navbar-menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+  .navbar-menu.active {
+    background: rgba(0,0,0,0.9);
+    top: 100%;
+    opacity: 1;
+    /*transition: all 0.5s ease;*/
+    z-index: 99;
+    height: 60vh;
+    font-size: 1.6rem;
+    display: grid;
+  }
+
+  .navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+
+  .navbar-item {
+    width: 100%;
+  }
+
+  .navbar-links {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: table;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .navbar-links:hover {
+    color: hotpink; 
+    transition: all 0.3s ease-in-out;
+  }
+    
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+  .navbar-toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+
+  .webLogo {
+    align-items: center;
+  }
+
+ .info {
+  display: flex;
+  height: auto;
+  background-image: url("WEBIMG/cgpt.PNG");
+  text-align: center;
+  margin: 0 20px;
+}
+
+.info:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+}
+
+.navbar-toggle {
+  display: grid;
+}
+
+.navbar-links {
+  color: #fff;
+  text-decoration:  none;
+  font-weight: bold;
+}
+
+.navbar-links:hover {
+    color: hotpink; 
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-info {
+  font-weight: bolder;
+  background-color: #131313;
+  color: #fff;
+  height: 60px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.info {
+  display: flex;
+  height: 450px;
+  background-image: url("WEBIMG/cgpt.PNG");
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 400px;
+  opacity: 0.5;
+}
+
+.info:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.about-me {
+  color: #fff;
+  z-index: 1;
+}
+
+#terms {
+  align-items: center;
+}
